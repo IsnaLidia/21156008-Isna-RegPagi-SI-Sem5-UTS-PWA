@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CV Isna Lidia Ningrum</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+   
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="Logo.png" />
+  <link rel="apple-touch-icon" href="images/LOGO CV.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="white"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Hello World">
+  <meta name="msapplication-TileImage" content="images/LOGO CV.png">
+  <meta name="msapplication-TileColor" content=" ">
+</head>
+<body class="fullscreen"> 
+  <div id="page">
+    <div class="photo-and-name">
+        <img src="images/ISNA LIDIA NINGRUM.jpg" class="photo" alt="Profile Picture">
+        <div class="contact-info-box">
+            <h1 class="name">Isna Lidia Ningrum</h1>
+            <br>
+            <h3 class="job-title">MAHASISWA</h3> 
+            <p class="contact-details">NO HANDPHONE : 087712624132  &nbsp; - &nbsp; Email: isnalidia0803@gmail.com</p>
+        </div>
+    </div>
+    <div id="objective">
+        <h3>Objective</h3>
+        <p>
+            Lulusan SMK Negeri 1 Slawi yang memiliki skill tersendiri dalam bidang manajemen komputer dan memiliki jiwa bertanggung jawab,suka belajar, menyukai hal baru dan tantangan untuk memecahkan masalah   
+        </p>
+    </div>
+    <div id="bio-data">
+        <h3>Bio-Data</h3>
+        <table>
+            <tr>
+                <td>Nama :</td>
+                <td><b>Isna Lidia Ningrum</b></td>
+            </tr>
+            <tr>
+                <td>NIM :</td>
+                <td><b> 21156008</b></td>
+            </tr>
+            <tr>
+                <td>KELAS :</td>
+                <td><b>Sistem Informasi (REGULER PAGI)</b></td>
+            </tr>
+            <tr>
+                <td>SEMESTER :</td>
+                <td><b>5</b></td>
+            </tr>
+            <tr>
+                <td>MATAKULIAH :</td>
+                <td><b>Pemrograman perangkat bergerak</b></td>
+            </tr>
+            <tr>
+                <td>TUJUAN BELAJAR PWA :</td>
+                <td><b>ingin belajar dan meningkatkan pengetahuan tentang bahasa pemrograman</b></td>
+            </tr>
+            
+        </table>
+    </div>
+    <div id="education">
+        <h3>Riwayat pendidikan</h3>
+        <table>
+            <tr>
+                <td style="width: 120px; color: gray;">2009 - 2015</td>
+                <td>SD Negeri 01 Grobog Wetan</td>
+            </tr>
+
+            <tr>
+                <td style="width: 120px; color: gray;">2015 - 2018</td>
+                <td>Mts Raden Fatah</td>
+            </tr>
+            
+            <tr>
+                <td style="width: 120px; color: gray;">2018 - 2021</td>
+                <td>SMK Negeri 1 Slawi</td>
+            </tr>
+        </table>
+    </div>
+    <div id="work">
+        <h3>Komentar</h3>
+        
+            <form id="comment-form">
+                <input type="text" id="name" placeholder="Nama" required></br></br>
+                <textarea id="comment" placeholder="Komentar" required></textarea></br>
+                <button type="submit">Submit</button>
+            </form>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+  <script src="js/main.js"></script>
+  <script src="js/indexDB.js"></script>
+  <script>
+    // Minta izin notifikasi
+if ('Notification' in window) {
+  Notification.requestPermission()
+    .then(function (permission) {
+      if (permission === 'granted') {
+        showNotification('Selamat datang!', 'Terima kasih telah menggunakan PWA ini.');
+        alert('berhasil di izinkan');
+      }
+      else if (permission === 'denied') {
+        // Izin diblokir
+        alert('tidak dapat akses');
+    
+      }
+    });
+}
+
+// Fungsi untuk menampilkan notifikasi
+function showNotification(title, message) {
+  if ('Notification' in window && Notification.permission === 'granted') {
+    navigator.serviceWorker.ready.then(function (registration) {
+      registration.showNotification(title, {
+        body: message,
+     
+      });
+    });
+  }
+}
+  </script>
+</body>
+</html>
+ 
